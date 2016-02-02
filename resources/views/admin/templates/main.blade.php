@@ -9,7 +9,7 @@
 	@include('admin.templates.partials.nav')
 
 	<section>
-		@yield('section')
+		@yield('content')
 	</section>
 
 	<script type="text/javascript" src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
