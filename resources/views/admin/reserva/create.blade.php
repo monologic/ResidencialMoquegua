@@ -18,7 +18,6 @@
 			{!! Form::label('fechanac', 'Fecha de Nacimiento') !!}
 			{!! Form::date('fechanac',null ,[ 'class' => 'form-control']) !!}
 		</div>
-
 		<div class="form-group">
 			{!! Form::label('sexo', 'Seleccione Sexo') !!}
 			{!! Form::select('sexo', ['' => 'Seleccione...', 'M' => 'Masculino', 'F' => 'Femenino'], null,[ 'class' => 'form-control',  'required']) !!}
@@ -33,31 +32,12 @@
 		</div>
 		<div class="form-group">
 			{!! Form::label('prof_ocup', 'Profesión o Ocupación') !!}
-			{!! Form::text('prof_ocup', null, [ 'class' => 'form-control','placeholder' => 'Profesión', 'required'])!!}
-		</div>
-		<div class="form-group">
-			{!! Form::label('pais', 'Pais') !!}
-			{!! Form::text('pais', null, [ 'class' => 'form-control','placeholder' => 'Nombre del Pais', 'required'])!!}
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('procedencia', 'Procendencia') !!}
-			{!! Form::text('procedencia', null, [ 'class' => 'form-control','placeholder' => 'De donde proviene', 'required'])!!}
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('destino', 'Destino') !!}
-			{!! Form::text('destino', null, [ 'class' => 'form-control','placeholder' => 'A donde se dirige', 'required'])!!}
-		</div>
-		<div class="form-group">
-			{!! Form::label('celular', 'Numero de Celular') !!}
-			{!! Form::text('destino', null, [ 'class' => 'form-control','placeholder' => 'Numero de celular o telefono', 'required'])!!}
+			{!! Form::text('prof_ocup', null, [ 'class' => 'form-control', 'required'])!!}
 		</div>
 		
-
-		<div class="form-group">
-			
-			{!! Form::submit('Registrar',[ 'class' => 'btn btn-primary'])!!}
+		<div class="bts">
+			<button class="btn btn-primary bt">aceptar</button>
+			<button class="btn btn-primary bt">cancelar</button>
 		</div>
 		
 
