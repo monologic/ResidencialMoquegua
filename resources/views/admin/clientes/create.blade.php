@@ -15,8 +15,8 @@
 			{!! Form::text('apellidos', null, [ 'class' => 'form-control', 'placeholder' => 'Apellidos', 'required'])!!}
 		</div>
 		<div class="form-group">
-			{!! Form::label('fechanac', 'Fecha de Nacimiento') !!}
-			{!! Form::date('fechanac',null ,[ 'class' => 'form-control']) !!}
+			{!! Form::label('fecha_nac', 'Fecha de Nacimiento') !!}
+			{!! Form::date('fecha_nac',null ,[ 'class' => 'form-control']) !!}
 		</div>
 
 		<div class="form-group">
@@ -28,8 +28,8 @@
 			{!! Form::text('dni', null, [ 'class' => 'form-control', 'required'])!!}
 		</div>
 		<div class="form-group">
-			{!! Form::label('estadocivil', 'Estado Civil') !!}
-			{!! Form::text('estadocivil', null, [ 'class' => 'form-control', 'required'])!!}
+			{!! Form::label('estado_civil', 'Estado Civil') !!}
+			{!! Form::text('estado_civil', null, [ 'class' => 'form-control', 'required'])!!}
 		</div>
 		<div class="form-group">
 			{!! Form::label('prof_ocup', 'Profesión o Ocupación') !!}
@@ -51,7 +51,7 @@
 		</div>
 		<div class="form-group">
 			{!! Form::label('celular', 'Numero de Celular') !!}
-			{!! Form::text('destino', null, [ 'class' => 'form-control','placeholder' => 'Numero de celular o telefono', 'required'])!!}
+			{!! Form::text('celular', null, [ 'class' => 'form-control','placeholder' => 'Numero de celular o telefono', 'required'])!!}
 		</div>
 		
 

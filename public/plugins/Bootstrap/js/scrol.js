@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-alert("entra el script");
+//alert("entra el script");
 var altura = $('.navbar-default').offset().top;
 
 $(window).on('scroll', function(){

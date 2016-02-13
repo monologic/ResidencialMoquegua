@@ -15,9 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=> 'admin'], function(){
+Route::group(['prefix'=> 'admin', 'middleware' => 'web'], function(){
 
 	Route::resource('clientes', 'ClientesController');
+
+	Route::get('clientes/{id}/destroy',[
+		'uses' => 'ClientesController@destroy',
+		'as'   => 'admin.clientes.destroy'
+	]);
 });
 
 /*
