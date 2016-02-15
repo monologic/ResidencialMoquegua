@@ -5,8 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>@yield('title', 'Default') Panel de Administración</title>
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/css/ve.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/css/animate.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/objetos/css/ve.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/objetos/css/animate.css') }}">
 	
 	</head>
 <style>
@@ -31,13 +31,21 @@
         .main{
         	
         	background-color:white;
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
         
         }
 
        .cuestion{
-			padding: 8%;
-			background-color:white;  
 
+			padding-top:90px;
+		
+       }
+       .cuestion2{
+
+			padding:10%;
+			
        }
 
        .menu-fixed {
@@ -54,7 +62,7 @@
         	position: relative;
 			height: 1000px;
         }     
-    
+    	
  </style>
 <body>
 
@@ -66,27 +74,12 @@
 	</header>
 	
 	
-		<div class="container-fluid con">
-			<div class="main row">
+		
+	<div class="main row">
 
 					<section class="col-sm-6 col-md-6 cuestion wow bounceInLeft" data-wow-offset="500" data-wow-delay="1s">
 							@yield('content')
 					</section>
-
-
-					<section class="col-sm-6 col-md-6 cuestion wow bounceInRight" data-wow-offset="500">
-							 <img src="{{ asset('imagen/fon.jpg') }}" class="img-thumbnail img-responsive">
-					</section>
-
-			</div>
-		
-
-		</div>
-	
-	
-	<div>
-		
-
 	</div>
 
 
@@ -94,11 +87,10 @@
 
 
 
-
-	<script type="text/javascript" src="{{ asset('plugins/bootstrap/js/bootstrap.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('plugins/bootstrap/js/jquery-1.12.0.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('plugins/bootstrap/js/wow.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('plugins/bootstrap/js/scrol.js') }}"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('plugins/objetos/js/wow.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('plugins/objetos/js/scrol.js') }}"></script>
 
 	<script>
     wow = new WOW(

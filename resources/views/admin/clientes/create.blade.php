@@ -5,7 +5,11 @@
 @section('content')
 	
 	{!! Form::open(['route' => 'admin.clientes.store', 'method' => 'POST']) !!}
-
+		
+		<div class="cuestion2">
+			
+			<h2>Agregar nuevos clientes</h2>
+		<hr>
 		<div class="form-group">
 			{!! Form::label('nombres', 'Nombres') !!}
 			{!! Form::text('nombres', null, [ 'class' => 'form-control', 'placeholder' => 'Nombres', 'required']) !!}
@@ -59,6 +63,9 @@
 			
 			{!! Form::submit('Registrar',[ 'class' => 'btn btn-primary'])!!}
 		</div>
+
+		</div>
+		
 		
 
 

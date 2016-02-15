@@ -3,11 +3,17 @@
 @section('title', 'Lista de Usuario')
 
 @section('content')
-	<a href="{{ route('admin.clientes.create') }}" class="btn btn-info">Agregar Nuevo Cliente</a>
+
+		
+	
+		<a href="{{ route('admin.clientes.create') }}" class="btn btn-info">Agregar Nuevo Cliente</a>
+
+		<h3>Clientes</h3>
 	<hr>
-	<table class="table table-hover">
+	<table class="table table-hover cuestion2">
 		<thead>
 			<th>ID</th>
+			<th>DNI</th>
 			<th>Nombres</th>
 			<th>Apellidos</th>
 			<th>Acción</th>
@@ -16,6 +22,7 @@
 			@foreach($clientes as $cliente)
 				<tr>
 					<td>{{ $cliente->id }}</td>
+					<td>{{ $cliente->dni }}</td>
 					<td>{{ $cliente->nombres }}</td>
 					<td>{{ $cliente->apellidos }}</td>
 					<td><a href="{{ route( 'admin.clientes.destroy', $cliente->id ) }}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a> <a href="{{ route( 'admin.clientes.edit', $cliente->id ) }}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a></td>
@@ -25,5 +32,8 @@
 	</table>
 
 	{!! $clientes->render() !!}
+	
+
+	
 
 @endsection
