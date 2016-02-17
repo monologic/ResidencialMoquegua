@@ -18,6 +18,9 @@ Route::get('/', function () {
 Route::group(['prefix'=> 'admin', 'middleware' => 'web'], function(){
 
 	Route::resource('clientes', 'ClientesController');
+	Route::get('/', function(){
+		return view('admin.templates.control');
+	});
 
 	Route::get('clientes/{id}/destroy',[
 		'uses' => 'ClientesController@destroy',
