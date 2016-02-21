@@ -22,6 +22,8 @@ Route::group(['prefix'=> 'admin', 'middleware' => 'web'], function(){
 	Route::resource('servicios', 'ServiciosController');
 
 	Route::resource('empleadoTipos', 'EmptiposController');
+
+	Route::resource('habtipos','thabitacionController');
 	
 	Route::get('/', function(){
 		return view('admin.templates.control');
@@ -41,6 +43,12 @@ Route::group(['prefix'=> 'admin', 'middleware' => 'web'], function(){
 		'uses' => 'EmptiposController@destroy',
 		'as'   => 'admin.empleadoTipos.destroy'
 	]);
+
+	Route::get('habtipos/{id}/destroy',[
+		'uses' => 'ThabitacionController@destroy',
+		'as'   => 'admin.habtipos.destroy'
+	]);
+
 });
 
 /*
