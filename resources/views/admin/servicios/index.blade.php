@@ -23,7 +23,10 @@
 					<td>{{ $servicio->id }}</td>
 					<td>{{ $servicio->servicio }}</td>
 					<td>{{ $servicio->costo }}</td>
-					<td><a href="{{ route( 'admin.servicios.destroy', $servicio->id ) }}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a> <a href="{{ route( 'admin.servicios.edit', $servicio->id ) }}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					<td>
+						<a href="{{ route( 'admin.servicios.destroy', $servicio->id ) }}" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+						<a href="{{ route( 'admin.servicios.edit', $servicio->id ) }}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>
+					</td>
 				</tr>
 			@endforeach
 		</tbody>

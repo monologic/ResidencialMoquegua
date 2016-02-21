@@ -20,6 +20,8 @@ Route::group(['prefix'=> 'admin', 'middleware' => 'web'], function(){
 	Route::resource('clientes', 'ClientesController');
 
 	Route::resource('servicios', 'ServiciosController');
+
+	Route::resource('empleadoTipos', 'EmptiposController');
 	
 	Route::get('/', function(){
 		return view('admin.templates.control');
@@ -28,6 +30,16 @@ Route::group(['prefix'=> 'admin', 'middleware' => 'web'], function(){
 	Route::get('clientes/{id}/destroy',[
 		'uses' => 'ClientesController@destroy',
 		'as'   => 'admin.clientes.destroy'
+	]);
+
+	Route::get('servicios/{id}/destroy',[
+		'uses' => 'ServiciosController@destroy',
+		'as'   => 'admin.servicios.destroy'
+	]);
+
+	Route::get('empleadoTipos/{id}/destroy',[
+		'uses' => 'EmptiposController@destroy',
+		'as'   => 'admin.empleadoTipos.destroy'
 	]);
 });
 
