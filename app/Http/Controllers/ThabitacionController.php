@@ -67,9 +67,6 @@ class ThabitacionController extends Controller
             $habtipo->foto = $name;
         }
 
-        
-        
-        
         $habtipo->save();
 
         return redirect()->route('admin.habtipos.index');

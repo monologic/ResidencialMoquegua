@@ -8,12 +8,16 @@ class Empleado extends Model
 {
     public $timestamps = false;
 
+    protected $fillable = [
+        'nombres', 'apellidos', 'fecha_nac', 'sexo', 'dni', 'direccion', 'celular', 'emptipo_id',
+    ];
+
     public function usuario()
     {
         return $this->hasOne('App\Usuario');
     }
 
-    public function emptipos()
+    public function emptipo()
     {
     	return $this->belongsTo('App\Emptipo');
     }
