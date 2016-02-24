@@ -29,9 +29,10 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 
 	Route::resource('usuarios','UsuariosController');
 
-	Route::get('/', function(){
+
+	Route::get('/', ['as' => 'admin', function () {
 		return view('admin.templates.control');
-	});
+	}]);
 
 	Route::get('clientes/{id}/destroy',[
 		'uses' => 'ClientesController@destroy',

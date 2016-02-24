@@ -98,14 +98,14 @@
 			</blockquote>
 
 			<div class="obj">
-				<div class="elem"><span class="glyphicon glyphicon-list"></span><p class="txt">Clientes</p></div>
-				<div class="elem"><span class="glyphicon glyphicon-user"></span><p class="txt">Usuarios</p></div>
-				<div class="elem"><span class="glyphicon glyphicon-home"></span><p class="txt">Habitaciones</p></div>
-				<div class="elem"><span class="glyphicon glyphicon-cloud-upload"></span><p class="txt">Reservas</p></div>
-				<div class="elem"><span class="glyphicon glyphicon-check".glyphicon .glyphicon-check></span><p class="txt">Comprabantes</p></div>
-				<div class="elem"><span class="glyphicon glyphicon-folder-open"></span><p class="txt">Empleados</p></div>
-				<div class="elem"><span class="glyphicon glyphicon-tag"></span><p class="txt">Tipos de Habitaciones</p></div>
-				<div class="elem"><span class="glyphicon glyphicon-cutlery"></span><p class="txt">Servicios</p></div>
+				<a href="{{ route('admin.clientes.index') }}"><div class="elem"><span class="glyphicon glyphicon-list"></span><p class="txt">Clientes</p></div></a>
+				<a href="{{ route('admin.usuarios.index') }}"><div class="elem"><span class="glyphicon glyphicon-user"></span><p class="txt">Usuarios</p></div></a>
+				<a href=""><div class="elem"><span class="glyphicon glyphicon-home"></span><p class="txt">Habitaciones</p></div></a>
+				<a href=""><div class="elem"><span class="glyphicon glyphicon-cloud-upload"></span><p class="txt">Reservas</p></div></a>
+				<a href=""><div class="elem"><span class="glyphicon glyphicon-check".glyphicon .glyphicon-check></span><p class="txt">Comprabantes</p></div></a>
+				<a href="{{ route('admin.empleados.index') }}"><div class="elem"><span class="glyphicon glyphicon-folder-open"></span><p class="txt">Empleados</p></div></a>
+				<a href="{{ route('admin.habtipos.index') }}"><div class="elem"><span class="glyphicon glyphicon-tag"></span><p class="txt">Tipos de Habitaciones</p></div></a>
+				<a href="{{ route('admin.servicios.index') }}"><div class="elem"><span class="glyphicon glyphicon-cutlery"></span><p class="txt">Servicios</p></div></a>
 
 
 			</div>
