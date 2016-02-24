@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=> 'admin', 'middleware' => 'web'], function(){
+Route::group(['prefix'=> 'admin', 'middleware' => ['web', 'auth']], function(){
 
 	Route::resource('clientes', 'ClientesController');
 
@@ -78,4 +78,10 @@ Route::group(['prefix'=> 'admin', 'middleware' => 'web'], function(){
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });
